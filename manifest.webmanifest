@@ -1,11 +1,14 @@
 {
-  "name": "Greece Life Admin",
-  "short_name": "Greece Admin",
+  "name": "Greece Life Admin — Όλη η Ελλάδα",
+  "short_name": "Greece Life Admin",
+  "description": "Ανεξάρτητος ελληνικός οδηγός για δημόσιες υπηρεσίες, υγεία και καθημερινές διοικητικές ανάγκες.",
   "lang": "el",
   "dir": "ltr",
   "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#f5f2ea",
   "theme_color": "#0b3b35",
-  "description": "Ανεξάρτητος οδηγός για δημόσιες υπηρεσίες, υγεία και καθημερινές διαδικασίες στην Ελλάδα."
+  "categories": ["government", "utilities", "health"],
+  "icons": []
 }
