@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "0.1.0",
+  "lastReviewed": "2026-08-14",
+  "sourcePolicy": "Official government sources only",
+  "tasks": [
+    {"id":"address","category":"Personal administration","title":"Change your registered address","source":"https://www.gov.gr/ipiresies/periousia-kai-phorologia/phorologia-politon/allage-stoikheion-metroou-phorologoumenon","reviewed":"2026-08-14"},
+    {"id":"declaration","category":"Digital documents","title":"Issue a responsible declaration","source":"https://www.gov.gr/ipiresies/polites-kai-kathemerinoteta/psephiaka-eggrapha-gov-gr/ekdose-upeuthunes-deloses","reviewed":"2026-08-14"},
+    {"id":"authorization","category":"Digital documents","title":"Issue an authorization","source":"https://www.gov.gr/org/grnet/psephiaka-eggrapha-gov-gr/ekdose-exousiodoteses","reviewed":"2026-08-14"},
+    {"id":"birth-certificate","category":"Family & records","title":"Get a birth certificate record","source":"https://www.gov.gr/org/ypes/gennese/lexiarkhike-praxe-genneses","reviewed":"2026-08-14"},
+    {"id":"sole-proprietorship","category":"Business","title":"Start a sole proprietorship","source":"https://www.gov.gr/upourgeia/oloi-foreis/anexartete-arkhe-demosion-esodon-aade/enarxe-atomikes-epikheireses","reviewed":"2026-08-14"},
+    {"id":"birth","category":"Family & records","title":"Explore birth-related services","source":"https://www.gov.gr/ipiresies/oikogeneia/gennese","reviewed":"2026-08-14"},
+    {"id":"marriage-record","category":"Family & records","title":"Get a marriage record","source":"https://www.gov.gr/org/ypes/oikogeneiake-katastase/lexiarkhike-praxe-gamou","reviewed":"2026-08-14"}
+  ]
+}
