@@ -1,0 +1,11 @@
+{
+  "name": "Greece Life Admin",
+  "short_name": "Greece Admin",
+  "lang": "el",
+  "dir": "ltr",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f5f2ea",
+  "theme_color": "#0b3b35",
+  "description": "Ανεξάρτητος οδηγός για δημόσιες υπηρεσίες, υγεία και καθημερινές διαδικασίες στην Ελλάδα."
+}
