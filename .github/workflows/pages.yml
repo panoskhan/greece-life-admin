@@ -33,9 +33,11 @@ jobs:
           p=Path('_site/index.html')
           s=p.read_text(encoding='utf-8')
           marker='</body>'
-          inject='  <script src="app-enhancements.js"></script>\n'
-          if inject.strip() not in s:
+          inject='  <script src="app-enhancements.js"></script>\n  <script src="life-events.js"></script>\n'
+          if 'src="app-enhancements.js"' not in s:
               s=s.replace(marker, inject+marker)
+          elif 'src="life-events.js"' not in s:
+              s=s.replace(marker, '  <script src="life-events.js"></script>\n'+marker)
           p.write_text(s,encoding='utf-8')
           PY
       - name: Configure Pages
