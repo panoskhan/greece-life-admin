@@ -30,7 +30,7 @@ for path in html_files:
 for path in js_files:
     text = path.read_text(encoding="utf-8")
     for url in re.findall(r'https?://[^\"\'`\s)]+', text):
-        urls.append((path, "js", url))
+        urls.append((path, "js", "url", url))
 
 errors = []
 external = []
@@ -41,26 +41,27 @@ for path, tag, kind, value in urls:
     if parsed.scheme in ("http", "https"):
         external.append((path, value))
         continue
-    target = (path.parent / value.split("#", 1)[0].split("?", 1)[0]).resolve()
+    target_text = value.split("#", 1)[0].split("?", 1)[0]
+    if not target_text:
+        continue
+    target = (path.parent / target_text).resolve()
     if not target.exists():
         errors.append(f"Missing local target: {path.relative_to(ROOT)} -> {value}")
 
-# Check external URLs referenced by the app. Network failures are reported as failures
-# so broken official links cannot silently enter the release.
 for path, url in external:
-    try:
-        req = Request(url, method="HEAD", headers={"User-Agent": "Greece-Life-Admin-Link-Checker/1.0"})
-        with urlopen(req, timeout=15) as response:
-            if response.status >= 400:
-                raise RuntimeError(f"HTTP {response.status}")
-    except Exception:
+    last_error = None
+    for method in ("HEAD", "GET"):
         try:
-            req = Request(url, method="GET", headers={"User-Agent": "Greece-Life-Admin-Link-Checker/1.0"})
+            req = Request(url, method=method, headers={"User-Agent": "Greece-Life-Admin-Link-Checker/1.0"})
             with urlopen(req, timeout=20) as response:
-                if response.status >= 400:
-                    raise RuntimeError(f"HTTP {response.status}")
+                if response.status < 400:
+                    last_error = None
+                    break
+                last_error = RuntimeError(f"HTTP {response.status}")
         except Exception as exc:
-            errors.append(f"External link failed: {path.relative_to(ROOT)} -> {url} ({exc})")
+            last_error = exc
+    if last_error:
+        errors.append(f"External link failed: {path.relative_to(ROOT)} -> {url} ({last_error})")
     time.sleep(0.05)
 
 print(f"Checked {len(html_files)} HTML files, {len(js_files)} JS files, {len(urls)} references.")
