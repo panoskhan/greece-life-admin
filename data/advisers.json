@@ -1,0 +1,23 @@
+{
+  "version": "0.1.0",
+  "reviewed": "2026-08-14",
+  "purpose": "Free navigation to authoritative information and qualified support in Greece. Not personalised professional advice.",
+  "categories": [
+    {"id":"legal-aid","title":"Δωρεάν νομική βοήθεια","description":"Πληροφορίες για κρατική νομική βοήθεια για όσους πληρούν τα προβλεπόμενα κριτήρια.","official":"https://www.gov.gr/"},
+    {"id":"health","title":"Υγεία & ιατρική ενημέρωση","description":"Βρες επίσημες πληροφορίες υγείας, δημόσιες δομές και υπηρεσίες του Υπουργείου Υγείας.","official":"https://www.moh.gov.gr/"},
+    {"id":"medicines","title":"Φάρμακα & ασφάλεια","description":"Αναζήτηση φαρμάκων, ανακοινώσεις ασφάλειας και αναφορά ανεπιθύμητων ενεργειών μέσω ΕΟΦ.","official":"https://www.eof.gr/"},
+    {"id":"social","title":"Κοινωνική υποστήριξη","description":"Πλοήγηση προς επίσημες κοινωνικές παροχές και υπηρεσίες.","official":"https://www.gov.gr/"},
+    {"id":"mental-health","title":"Ψυχική υγεία","description":"Εύρεση επίσημων υπηρεσιών και δομών ψυχικής υγείας. Δεν αντικαθιστά επαγγελματία υγείας.","official":"https://www.moh.gov.gr/"},
+    {"id":"emergency","title":"Επείγον περιστατικό","description":"Για άμεσο κίνδυνο ή επείγον περιστατικό χρησιμοποίησε τις επίσημες υπηρεσίες έκτακτης ανάγκης.","official":"https://civilprotection.gov.gr/en/112"},
+    {"id":"consumer","title":"Καταναλωτής","description":"Βρες επίσημες πληροφορίες και αρμόδιες υπηρεσίες για δικαιώματα καταναλωτή.","official":"https://www.gov.gr/"},
+    {"id":"employment","title":"Εργασία & εργασιακά","description":"Πλοήγηση προς επίσημες υπηρεσίες και πληροφορίες για εργαζομένους και εργοδότες.","official":"https://www.gov.gr/"},
+    {"id":"immigration","title":"Υπηρεσίες για αλλοδαπούς","description":"Βρες επίσημες πληροφορίες για άδειες διαμονής και σχετικές διοικητικές διαδικασίες.","official":"https://migration.gov.gr/"},
+    {"id":"disability","title":"Αναπηρία & υποστήριξη","description":"Πλοήγηση προς επίσημες υπηρεσίες, παροχές και πιστοποίηση αναπηρίας.","official":"https://www.gov.gr/"}
+  ],
+  "safety": [
+    "The app does not diagnose conditions, prescribe medicines, recommend doses, or replace a doctor or pharmacist.",
+    "The app does not create an attorney-client relationship or provide personalised legal advice.",
+    "For emergencies, use the official emergency service rather than waiting for an online response.",
+    "Always verify current requirements and information with the linked official authority."
+  ]
+}
