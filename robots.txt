@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://panoskhan.github.io/greece-life-admin/sitemap.xml
