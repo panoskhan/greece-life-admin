@@ -23,12 +23,27 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Build Pages artifact
+        run: |
+          rm -rf _site
+          mkdir _site
+          cp -R . _site
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('_site/index.html')
+          s=p.read_text(encoding='utf-8')
+          marker='</body>'
+          inject='  <script src="app-enhancements.js"></script>\n'
+          if inject.strip() not in s:
+              s=s.replace(marker, inject+marker)
+          p.write_text(s,encoding='utf-8')
+          PY
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: _site
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
