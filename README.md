@@ -1,5 +1,7 @@
 # Greece Life Admin 🇬🇷
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23405134.svg)](https://doi.org/10.5281/zenodo.23405134)
+
 A free, independent, privacy-first guide to finding official Greek administrative services.
 
 ## What it does
